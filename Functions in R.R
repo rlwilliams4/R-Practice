@@ -19,4 +19,31 @@ while(i > -1) { #infinite loop
 }
 
 
+install.packages("rio")
+install.packages("dplyr")
+library("rio")
+library("dplyr")
+
+Kazo <- read.csv("Kazo_0.csv", x) ### FOR PROJECT
+
+str(Kazo)
+glimpse(Kazo)
+
+nrow(Kazo)
+colnames(Kazo)
+names(Kazo)
+
+ages <- Kazo$age
+class(ages)
+typeof(ages)
+is.vector(ages)
+mean(ages)
+
+sum(Kazo$HIV)
+sum(Kazo$HIV)/length(Kazo$HIV)
+
+male <- sum(Kazo$male)
+female <- length(Kazo$male) - sum(Kazo$male)
+
+
 

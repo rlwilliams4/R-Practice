@@ -12,19 +12,30 @@ temp <- c(35,88,42,84,81,30)
 city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", "San Juan", "Toronto")
 
 # Use the names function and the objects defined in the previous exercises to associate the temperature data with its corresponding city.
+
+  # As a data frame
+temp_frame <- data.frame(city, temp)
+
+  # As a vector
 names(temp) <- city
 
 # Use the [ and : operators to access the temperature of the first three cities on the list.
+  #As a data frame
+temp_frame$temp[1:3]
+
+  #As a vectir
 temp[1:3]
 
 # Use the [ operator to access the temperature of Paris and San Juan.
 temp[c("Paris", "San Juan")]                    
 
 # Use the : operator to create a sequence of numbers  12,13,14,.....73
-x(12:73)
+c(12:73)
 
 # Create a vector containing all the positive odd numbers smaller than 100.
-odd.pos <- 2*c(0:49)+1              
+odd.pos <- 2*c(0:49)+1
+# or...
+odd.pos <- seq(1,100,2)
 
 # Create a vector of numbers that starts at 6, does not pass 55, and adds numbers in increments of 4/7: 6, 6 + 4/7, 6 + 8/7, and so on. How many numbers does the list have? Hint: use seq and length.
 odd.seq <- seq(6,55, by = 4/7)

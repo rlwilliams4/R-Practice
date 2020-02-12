@@ -102,3 +102,5 @@ s[,5]
 
 max(y)
 which.max(y)
+
+any(y=3)

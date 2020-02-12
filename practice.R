@@ -35,7 +35,7 @@ c(12:73)
 # Create a vector containing all the positive odd numbers smaller than 100.
 odd.pos <- 2*c(0:49)+1
 # or...
-odd.pos <- seq(1,100,2)
+odd.pos <- seq(1,100,2)s
 
 # Create a vector of numbers that starts at 6, does not pass 55, and adds numbers in increments of 4/7: 6, 6 + 4/7, 6 + 8/7, and so on. How many numbers does the list have? Hint: use seq and length.
 odd.seq <- seq(6,55, by = 4/7)
@@ -59,6 +59,27 @@ x <- as.integer(x)
 #  In the data frame you made in the second problem convert the temperature from Fahrenheit to Celsius. The conversion is  
 #C=5/9×( F −32)
 temp <- 5/9*(temp-32)
+
+### Functions
+just_add <- function(a,b = 0) {a+b}
+just_add(5)
+
+dist <- function(x,y) {sum((x-y)^2)^.5}
+
+even_or_odd <- function(a = 0) {
+  if(a %% 2 == 0) {return("Even")}
+  if(a %% 2 == 1) {return("Odd")}
+  else(return("Not an integer"))
+}
+
+x <- c(1:4)
+for(i in x){print(i)}
+
+i=0
+while(i > -1) { #infinite loop
+  print(paste("loop",i))
+  i = i+1
+}
 
 
 
